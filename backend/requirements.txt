@@ -1,0 +1,11 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+sqlalchemy==2.0.49
+greenlet==3.3.2
+aiosqlite==0.20.0
+pydantic-settings
+email-validator>=2.0==2.7.1
+python-jose[cryptography]==3.3.0
+bcrypt==4.3.0
+python-multipart==0.0.20
+aiofiles==24.1.0
