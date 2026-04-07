@@ -239,7 +239,7 @@ export default function LandingPage() {
               </Button>
             </Link>
             <Link href="/cases">
-              <Button size="lg" variant="outline" className="border-emerald-300 text-white hover:bg-emerald-500">
+              <Button size="lg" variant="outline" className="border-emerald-300 bg-transparent text-white hover:bg-emerald-500">
                 Browse Cases
               </Button>
             </Link>

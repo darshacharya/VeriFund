@@ -16,4 +16,185 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Global dark mode — toggled via .dark on <html> */
+.dark {
+  --background: #111827;
+  --foreground: #f9fafb;
+}
+
+.dark .text-gray-900 {
+  color: #f9fafb;
+}
+
+.dark .text-gray-500 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af;
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-700 {
+  color: #e5e7eb;
+}
+
+.dark .bg-white,
+.dark .bg-white\/80 {
+  background-color: #1f2937;
+}
+
+/* Preserve explicit button styling inside colored sections (CTA) */
+.dark .bg-gradient-to-br button.bg-white {
+  background-color: white;
+  color: inherit;
+}
+
+.dark .bg-gradient-to-br button.text-white {
+  color: white;
+}
+
+.dark .bg-gradient-to-br button.text-emerald-700 {
+  color: #047857;
+}
+
+.dark .bg-gradient-to-br button.border-emerald-300 {
+  border-color: #6ee7b7;
+}
+
+.dark .bg-gradient-to-br button.hover\:bg-emerald-50:hover {
+  background-color: #ecfdf5;
+}
+
+.dark .bg-gradient-to-br button.hover\:bg-emerald-500:hover {
+  background-color: #10b981;
+}
+
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+
+.dark .border-gray-100 {
+  border-color: #374151;
+}
+
+.dark .divide-gray-100 > :not(:last-child) {
+  border-color: #374151;
+}
+
+.dark .bg-gray-200 {
+  background-color: #374151;
+}
+
+.dark .bg-gray-50 {
+  background-color: #374151;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: #374151;
+}
+
+.dark .bg-red-50 {
+  background-color: #7f1d1d;
+}
+
+.dark .text-red-700 {
+  color: #fca5a5;
+}
+
+/* Dark mode form inputs — lighter than container so they stand out */
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9ca3af;
+}
+
+.dark select option {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+/* Dark mode gradients and section backgrounds */
+.dark .bg-gradient-to-br.from-emerald-50,
+.dark .from-emerald-50 {
+  --tw-gradient-from: #064e3b;
+  --tw-gradient-to: #111827;
+}
+
+.dark .via-white {
+  --tw-gradient-via: #1f2937;
+}
+
+.dark .to-teal-50 {
+  --tw-gradient-to: #111827;
+}
+
+.dark .bg-emerald-100 {
+  background-color: #064e3b;
+}
+
+.dark .text-emerald-700 {
+  color: #6ee7b7;
+}
+
+.dark .bg-emerald-50 {
+  background-color: #064e3b;
+}
+
+.dark .bg-rose-50 {
+  background-color: #4c0519;
+}
+
+.dark .bg-purple-50 {
+  background-color: #3b0764;
+}
+
+.dark .bg-blue-50 {
+  background-color: #1e3a5f;
+}
+
+.dark .bg-blue-100 {
+  background-color: #1e3a5f;
+}
+
+.dark .text-blue-700 {
+  color: #93c5fd;
+}
+
+.dark .bg-amber-50 {
+  background-color: #451a03;
+}
+
+.dark .bg-teal-50 {
+  background-color: #042f2e;
+}
+
+.dark .shadow-sm {
+  --tw-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.dark .hover\:shadow-lg:hover {
+  --tw-shadow-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode decorative blobs */
+.dark .bg-emerald-200 {
+  background-color: #065f46;
+}
+
+.dark .bg-teal-200 {
+  background-color: #0d9488;
 }
