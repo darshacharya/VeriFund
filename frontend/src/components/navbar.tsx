@@ -6,6 +6,7 @@ import { useState } from "react";
 import { useAuth } from "@/lib/auth-context";
 import { Button } from "@/components/ui/button";
 import { NotificationBell } from "@/components/notification-bell";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Shield, Menu, X, Heart, LayoutDashboard, FolderOpen, LogOut } from "lucide-react";
 
 export function Navbar() {
@@ -19,7 +20,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur-md dark:bg-gray-900/80 dark:border-gray-700">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
@@ -57,6 +58,7 @@ export function Navbar() {
                     <LogOut className="h-4 w-4" />
                   </Button>
                 </div>
+                <ThemeToggle />
               </>
             ) : (
               <>
@@ -69,16 +71,20 @@ export function Navbar() {
                 <Link href="/register">
                   <Button size="sm">Sign up</Button>
                 </Link>
+                <ThemeToggle />
               </>
             )}
           </div>
 
-          <button
-            className="md:hidden p-2 text-gray-600"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="flex md:hidden items-center gap-1">
+            <ThemeToggle />
+            <button
+              className="p-2 text-gray-600"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
